@@ -12,25 +12,26 @@
     </div>
   </div>
   <div v-else class="container app-content empty flex flex-column">
-    <Loading/>
+    <Loading />
     <img src="@/assets/illustration-empty.svg" alt="" />
     <h3>There is nothing here</h3>
     <p>Unable to connect server</p>
-    </div>
+  </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from "vuex";
 import Navigation from "./components/Navigation";
-import Loading from "./components/Loading"
+import Loading from "./components/Loading";
 export default {
   data() {
     return {
       mobile: null,
     };
   },
-  components:{
-    Navigation, Loading,
+  components: {
+    Navigation,
+    Loading,
   },
   created() {
     this.GET_SITES_INFO();
@@ -48,9 +49,9 @@ export default {
       this.mobile = false;
     },
   },
-    computed: {
+  computed: {
     ...mapState(["sitesLoaded"]),
-    },
+  },
 };
 </script>
 <style lang="scss">
@@ -64,7 +65,7 @@ export default {
 }
 
 .app {
-  background-color: #1C1B21;
+  background-color: #1c1b21;
   min-height: 100vh;
   @media (min-width: 900px) {
     flex-direction: row !important;
@@ -82,37 +83,36 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1C1B21;
-  color: #fff;
+  background-color: #1c1b21;
+  color: #8186af;
 
   p {
     margin-top: 16px;
   }
 }
 
+.empty {
+  margin-top: 160px;
+  align-items: center;
 
-  .empty {
-    margin-top: 160px;
-    align-items: center;
-    
-    img {
-      width: 214px;
-      height: 200px;
-    }
-
-    h3 {
-      font-size: 20px;
-      margin-top: 40px;
-    }
-
-    p {
-      text-align: center;
-      max-width: 224px;
-      font-size: 12px;
-      font-weight: 300;
-      margin-top: 16px;
-    }
+  img {
+    width: 214px;
+    height: 200px;
   }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  p {
+    text-align: center;
+    max-width: 224px;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 16px;
+  }
+}
 
 // animated siteInfo
 
@@ -162,7 +162,7 @@ button,
 }
 
 .dark-gray {
-  background-color: #1C1B21;
+  background-color: #1c1b21;
 }
 // utility classes
 
@@ -202,7 +202,6 @@ button,
     border-radius: 50%;
     margin-right: 15px;
     animation: pulse 1.5s infinite ease-in;
-
   }
   font-size: 12px;
   margin-right: 30px;

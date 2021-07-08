@@ -4,12 +4,18 @@
     <div class="header flex">
       <div class="left flex flex-column">
         <h1>DistRad Site Status</h1>
-        <span>There are {{ sitesInfo.length }} sites status available</span>
+        <span class="sentence"
+          >There are {{ sitesInfo.length }} sites status available</span
+        >
       </div>
     </div>
     <!-- Sites -->
     <div v-if="sitesInfo.length > 0">
-      <Site v-for="(siteInfo, index) in sitesInfo" :siteInfo="siteInfo" :key="index" />
+      <Site
+        v-for="(siteInfo, index) in sitesInfo"
+        :siteInfo="siteInfo"
+        :key="index"
+      />
     </div>
     <div v-else class="empty flex flex-column">
       <img src="@/assets/illustration-empty.svg" alt="" />
@@ -20,14 +26,12 @@
 </template>
 
 <script>
-import Site from '../components/Site'
-import { mapState } from 'vuex'
+import Site from "../components/Site";
+import { mapState } from "vuex";
 
 export default {
   name: "Home",
-  data() {
-   
-  },
+  data() {},
 
   components: {
     Site,
@@ -36,11 +40,9 @@ export default {
     ...mapState(["sitesInfo", "dummy"]),
     sitesData() {
       return this.sitesInfo;
-    }
-   
-  }
-
-}
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 list-complete-item {
@@ -56,16 +58,18 @@ list-complete-item {
 }
 
 .home {
-  color: #fff;
+  color: #808080;
 
   .header {
     margin-bottom: 65px;
+    .sentence {
+      color: #dcdcdc;
+    }
 
     .left,
     .right {
       flex: 1;
     }
-
     .right {
       justify-content: flex-end;
       align-items: center;
@@ -96,7 +100,8 @@ list-complete-item {
           top: 25px;
           list-style: none;
           background-color: #1e2139;
-          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
           li {
             cursor: pointer;
@@ -131,10 +136,10 @@ list-complete-item {
       }
     }
   }
-    .empty {
+  .empty {
     margin-top: 160px;
     align-items: center;
-    
+
     img {
       width: 214px;
       height: 200px;

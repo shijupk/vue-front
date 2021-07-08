@@ -1,8 +1,8 @@
 import axios from "axios";
-import {apiUrl} from "@/env"
+import { apiUrl } from "@/env";
 
 export const api = {
-    async getSitesInfo() {
-        return axios.get(`${apiUrl}/siteinfo`)
-    }
+  async getSitesInfo() {
+    return axios.get(`${apiUrl}/siteinfo`);
+  },
 };
