@@ -64,7 +64,7 @@ export default {
 }
 
 .app {
-  background-color: #141625;
+  background-color: #1C1B21;
   min-height: 100vh;
   @media (min-width: 900px) {
     flex-direction: row !important;
@@ -82,7 +82,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #141625;
+  background-color: #1C1B21;
   color: #fff;
 
   p {
@@ -157,6 +157,13 @@ button,
   background-color: #ff8f00;
 }
 
+.gray {
+  background-color: #292930;
+}
+
+.dark-gray {
+  background-color: #1C1B21;
+}
 // utility classes
 
 .flex {
@@ -195,21 +202,14 @@ button,
     border-radius: 50%;
     margin-right: 15px;
     animation: pulse 1.5s infinite ease-in;
-  // content: '';
-  // display: block;
-  // left: -5px;
-  // top: -5px;
-  // width: 25px;
-  // height: 25px;
-  // border-radius: 50%;
-  // animation: pulse 1.5s infinite ease-in;
+
   }
   font-size: 12px;
   margin-right: 30px;
   align-items: center;
   padding: 8px 20px;
-  border-radius: 10px;
-  //width: 100px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 @keyframes pulse {
   from {

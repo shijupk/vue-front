@@ -16,7 +16,8 @@ export default {
 header {
   z-index: 99;
   flex-direction: row;
-  background-color: #1e2139;
+  background-color:#292930;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   @media (min-width: 900px) {
     min-height: 100%;
     min-width: 50px;
@@ -26,9 +27,8 @@ header {
 
   .branding {
     border-radius: 0 8px 8px 0;
-    background-color: #7c5dfa;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     @media (min-width: 900px) {
       width: 100%;
     }
