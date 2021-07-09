@@ -48,8 +48,7 @@ export default {
 list-complete-item {
   transition: all 1s;
 }
-.list-complete-enter, .list-complete-leave-to
-/* .list-complete-leave-active below version 2.1.8 */ {
+.list-complete-enter, .list-complete-leave-to {
   opacity: 0;
   transform: translateY(30px);
 }
@@ -58,12 +57,12 @@ list-complete-item {
 }
 
 .home {
-  color: #808080;
+  color: var(--mine-text-gray);
 
   .header {
     margin-bottom: 65px;
     .sentence {
-      color: #dcdcdc;
+      color: var(--mine-text-gray-lite);
     }
 
     .left,
@@ -99,7 +98,7 @@ list-complete-item {
           position: absolute;
           top: 25px;
           list-style: none;
-          background-color: #1e2139;
+          background-color: var(--mine-gray);
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
             rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
@@ -109,8 +108,8 @@ list-complete-item {
             padding: 10px 20px;
 
             &:hover {
-              color: #1e2139;
-              background-color: #fff;
+              color: var(--mine-gray);
+              background-color: var(--mine-white);
             }
           }
         }
@@ -118,7 +117,7 @@ list-complete-item {
 
       .button {
         padding: 8px 10px;
-        background-color: #7c5dfa;
+        background-color: var(--mine-purple);
         border-radius: 40px;
 
         .inner-button {
@@ -127,7 +126,7 @@ list-complete-item {
           padding: 8px;
           align-items: center;
           justify-content: center;
-          background-color: #fff;
+          background-color: var(--mine-white);
           img {
             width: 10px;
             height: 10px;

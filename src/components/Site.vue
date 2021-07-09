@@ -27,10 +27,10 @@ export default {
   cursor: pointer;
   gap: 16px;
   margin-bottom: 16px;
-  color: #dcdcdc;
+  color: var(--mine-text-gray-lite);
   border-radius: 10px;
   padding: 28px 32px;
-  background-color: #292930;
+  background-color:var(--mine-gray);
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: all 1s;

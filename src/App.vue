@@ -56,7 +56,18 @@ export default {
 </script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root
+{
+  --mine-gray: #292930;
+  --mine-dark-gray:  #1c1b21;
+  --mine-red:  #9A2035;
+  --mine-blue: #5abcd1;
+  --mine-text-gray: #808080;
+  --mine-text-gray-lite: #dcdcdc;
+  --mine-whte: #fff;
+  --mine-purple: #7c5dfa;
 
+}
 * {
   margin: 0;
   padding: 0;
@@ -158,12 +169,13 @@ button,
 }
 
 .gray {
-  background-color: #292930;
+  background-color: var(--mine-gray)
 }
 
 .dark-gray {
-  background-color: #1c1b21;
+  background-color: var(--mine-dark-gray)
 }
+
 // utility classes
 
 .flex {

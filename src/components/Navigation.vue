@@ -4,27 +4,34 @@
       <img src="@/assets/logo.svg" alt="" />
     </div>
     <div class="sidenav right">
-      <div class="nav"><div class="icon fa fa-home"></div></div>
-      <div class="nav active"><div class="icon fa fa-database"></div></div>
-      <div class="nav active"><div class="icon fa fa-users"></div></div>
+      <div class="nav active"><font-awesome-icon :icon="['fas', 'skull']" class="icon"/></div>
+      <div class="nav "> <font-awesome-icon :icon="['fas', 'cog']" class="icon"/></div>
+      <div class="nav "><font-awesome-icon :icon="['fas', 'igloo']" class="icon"/></div>
     </div>
   </header>
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+library.add(fas);
+library.add(far);
 export default {
   name: "navigation",
 };
 </script>
 
 <style lang="scss" scoped>
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+//@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
 
 header {
   z-index: 99;
   flex-direction: row;
-  background-color: #292930;
+  background-color: var(--mine-gray);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
   @media (min-width: 900px) {
     min-height: 100%;
     min-width: 50px;
@@ -52,14 +59,12 @@ header {
   flex-basis: 100%;
   flex-direction: row;
   justify-content: center;
-  align-content: center;
+ // depends on text size
   position: relative;
   height: 100%;
+  gap: 40px;
   @media (min-width: 900px) {
     flex-direction: column;
-    width: 100%;
-    height: 50%;
-    margin-top: 50px;
   }
 
   .nav {
@@ -67,22 +72,13 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     z-index: 1000;
-    transition: all 0.4s ease;
+    //transition: all 0.4s ease;
     cursor: pointer;
-    margin-top: 25px;
-    margin-right: 50px;
-    color: #808080;
+    color: var(--mine-text-gray);
+    padding: 22px;
     &:hover {
-      color: #fff;
-    }
-
-    @media (min-width: 900px) {
-      flex-direction: column;
-      width: 100%;
-      margin-right: 50px;
-      margin-top: 50px;
+      color: var(--mine-blue) !important
     }
 
     .icon {
@@ -92,9 +88,19 @@ header {
       position: relative;
     }
 
-    .active .icon {
-      background: #ff5722;
+
+  }
+
+  .active {
+    color: var(--mine-blue) !important;
+    border-top: 3px solid var(--mine-blue);
+    @media (min-width: 900px) {
+       border-left: 3px solid var(--mine-blue);
+       border-top:none;
     }
   }
+
+  
+
 }
 </style>
